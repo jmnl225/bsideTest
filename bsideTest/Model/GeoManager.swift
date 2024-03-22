@@ -8,7 +8,7 @@
 import Foundation
 
 class GeoManager {
-    let urlString = "https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key="
+    let urlString = "https://maps.googleapis.com/maps/api/geocode/json?latlng=37.5682392,127.1807255&key="
     
     let apiKey = "AIzaSyCWcSomk-sSkj_QjDIXANsombKz8b7Qbeg"
 
@@ -41,10 +41,14 @@ class GeoManager {
         do {
             let decodedData = try decoder.decode(Response.self, from: resultData)
             var address : String? = "!"
-            //print(decodedData) //받은 데이터를 전부 표기
+            //받은 데이터를 전부 표기
+            print(decodedData)
+            
+             //해당 지역의 행정국가 표기
             for data in decodedData.results {
                 address = data.formatted_address
             }
+            
             return address
         }catch {
             print("parsing error")
