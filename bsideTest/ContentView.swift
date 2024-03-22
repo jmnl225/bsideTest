@@ -19,8 +19,9 @@ struct ContentView: View {
         .contentShape(Rectangle()) // 추가
         .onTapGesture {
             print("touch")
-            let geoManager = GeoManager()
-            geoManager.performRequest(with: geoManager.urlString + geoManager.apiKey)
+            let naverManager = NaverManager()
+            naverManager.performRequest(with: naverManager.urlString)
+            //geoManager.performRequest(with: geoManager.urlString + geoManager.apiKey)
         }
     }
 }

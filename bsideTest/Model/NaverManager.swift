@@ -7,16 +7,28 @@
 
 import Foundation
 
-class GeoManager {
-    let urlString = "https://maps.googleapis.com/maps/api/geocode/json?latlng=37.5682392,127.1807255&key="
+class NaverManager {
+    let urlString = "https://naveropenapi.apigw.ntruss.com/map-reversegeocode/v2/gc?request=coordsToaddr&coords=129.1133567,35.2982640&sourcecrs=epsg:4326&output=json&orders=legalcode"
     
-    let apiKey = ""
+    let clientID = "4fbq8lnxpt"
+    let clientSecret = "nc40XPnBoYouVYGNtf2v4nuUAnMUqIOhxTvCXG6D"
 
     
     func performRequest(with urlString: String) {
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url){ (data, response, error) in
+            
+            // URLRequest 생성
+            var request = URLRequest(url: url)
+
+            // 헤더에 데이터 추가
+            request.allHTTPHeaderFields = [
+                "Content-Type": "application/json",
+                "X-NCP-APIGW-API-KEY-ID": clientID,
+                "X-NCP-APIGW-API-KEY": clientSecret
+            ]
+            
+            let task = URLSession.shared.dataTask(with: request){ (data, response, error) in
                 
                 if error != nil {
                     fatalError("data is nil")
@@ -38,16 +50,12 @@ class GeoManager {
     
     func parseJSON(_ resultData: Data) -> String? {
         let decoder = JSONDecoder()
+        print(resultData)
         do {
-            let decodedData = try decoder.decode(Response.self, from: resultData)
+            let decodedData = try decoder.decode(AddressData.self, from: resultData)
             var address : String? = "!"
             //받은 데이터를 전부 표기
             print(decodedData)
-            
-             //해당 지역의 행정국가 표기
-            for data in decodedData.results {
-                address = data.formatted_address
-            }
             
             return address
         }catch {

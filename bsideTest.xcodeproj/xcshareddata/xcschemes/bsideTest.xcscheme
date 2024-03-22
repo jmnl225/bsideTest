@@ -80,6 +80,16 @@
             value = "IDEPreferLogStreaming=YES"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "logSetting1"
+            value = "IDELogRedirectionPolicy oslogToStdio"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "logSetting2"
+            value = "OS_ACTIVITY_MODE disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
