@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-bsideTest/Pods-bsideTest-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CodableGeoJSON/CodableGeoJSON.framework
+${BUILT_PRODUCTS_DIR}/CodableJSON/CodableJSON.framework

@@ -1,0 +1,6 @@
+framework module Pods_bsideTestTests {
+  umbrella header "Pods-bsideTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

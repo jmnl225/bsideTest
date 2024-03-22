@@ -1,0 +1,28 @@
+PODS:
+  - CodableGeoJSON (3.0.0):
+    - CodableJSON (~> 3.0)
+  - CodableJSON (3.0.0)
+  - GoogleMaps (8.4.0):
+    - GoogleMaps/Maps (= 8.4.0)
+  - GoogleMaps/Base (8.4.0)
+  - GoogleMaps/Maps (8.4.0):
+    - GoogleMaps/Base
+
+DEPENDENCIES:
+  - CodableGeoJSON
+  - GoogleMaps (= 8.4.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CodableGeoJSON
+    - CodableJSON
+    - GoogleMaps
+
+SPEC CHECKSUMS:
+  CodableGeoJSON: 389bfc7cc9db0ac35dfcb8e8d77c44f6782299a8
+  CodableJSON: 5964a625814f91b5aff54fd89db5195c5cd3852e
+  GoogleMaps: 8939898920281c649150e0af74aa291c60f2e77d
+
+PODFILE CHECKSUM: e0ba121804bc2e2d03c481576a78de85c2517fbd
+
+COCOAPODS: 1.15.2

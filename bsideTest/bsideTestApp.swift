@@ -12,6 +12,10 @@ struct bsideTestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
         }
     }
+    
+
+    
 }

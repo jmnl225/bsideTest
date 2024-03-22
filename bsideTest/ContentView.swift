@@ -16,6 +16,12 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .contentShape(Rectangle()) // 추가
+        .onTapGesture {
+            print("touch")
+            let geoManager = GeoManager()
+            geoManager.performRequest(with: geoManager.urlString + geoManager.apiKey)
+        }
     }
 }
 
