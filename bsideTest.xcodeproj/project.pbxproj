@@ -17,8 +17,11 @@
 		6C03F73C2BAD60B000013E56 /* bsideTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C03F73B2BAD60B000013E56 /* bsideTestUITestsLaunchTests.swift */; };
 		6CB9868D2BADA61C004B0EDB /* NaverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9868C2BADA61C004B0EDB /* NaverManager.swift */; };
 		6CB9868F2BADA87A004B0EDB /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9868E2BADA87A004B0EDB /* AddressData.swift */; };
+		6CB986912BADBD78004B0EDB /* CountryProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB986902BADBD78004B0EDB /* CountryProperties.swift */; };
+		6CB986932BADBDCF004B0EDB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB986922BADBDCF004B0EDB /* MapView.swift */; };
 		6CEC83FC2BAD71D900DB8294 /* GeoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEC83FB2BAD71D900DB8294 /* GeoManager.swift */; };
 		6CEC84002BAD746100DB8294 /* GeoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEC83FF2BAD746100DB8294 /* GeoData.swift */; };
+		6CEDFDCB2BAF192400889783 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDFDCA2BAF192400889783 /* SplashView.swift */; };
 		87A047094EF3B29DF76C481E /* Pods_bsideTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE600D661D6CC497A311957 /* Pods_bsideTest.framework */; };
 		B105649B228E26CCF8106CBA /* Pods_bsideTest_bsideTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05850AF099A6552AD7A6295D /* Pods_bsideTest_bsideTestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,8 +59,11 @@
 		6C03F73B2BAD60B000013E56 /* bsideTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bsideTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6CB9868C2BADA61C004B0EDB /* NaverManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverManager.swift; sourceTree = "<group>"; };
 		6CB9868E2BADA87A004B0EDB /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
+		6CB986902BADBD78004B0EDB /* CountryProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryProperties.swift; sourceTree = "<group>"; };
+		6CB986922BADBDCF004B0EDB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6CEC83FB2BAD71D900DB8294 /* GeoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoManager.swift; sourceTree = "<group>"; };
 		6CEC83FF2BAD746100DB8294 /* GeoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoData.swift; sourceTree = "<group>"; };
+		6CEDFDCA2BAF192400889783 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		70EAB5EC1C804713F9BAB520 /* Pods-bsideTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bsideTestTests.release.xcconfig"; path = "Target Support Files/Pods-bsideTestTests/Pods-bsideTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		AAF58C14E0124DE3B7AFE1DA /* Pods_bsideTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bsideTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2FC03F4FE0FAA5A6C47ECFB /* Pods-bsideTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bsideTest.debug.xcconfig"; path = "Target Support Files/Pods-bsideTest/Pods-bsideTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,9 +150,11 @@
 			children = (
 				6CEC83F82BAD6BF000DB8294 /* Model */,
 				6C03F71E2BAD60AE00013E56 /* bsideTestApp.swift */,
+				6CEDFDCA2BAF192400889783 /* SplashView.swift */,
 				6C03F7202BAD60AE00013E56 /* ContentView.swift */,
 				6C03F7222BAD60B000013E56 /* Assets.xcassets */,
 				6C03F7242BAD60B000013E56 /* Preview Content */,
+				6CB986922BADBDCF004B0EDB /* MapView.swift */,
 			);
 			path = bsideTest;
 			sourceTree = "<group>";
@@ -183,6 +191,7 @@
 				6CEC83FF2BAD746100DB8294 /* GeoData.swift */,
 				6CB9868C2BADA61C004B0EDB /* NaverManager.swift */,
 				6CB9868E2BADA87A004B0EDB /* AddressData.swift */,
+				6CB986902BADBD78004B0EDB /* CountryProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,11 +471,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CB9868F2BADA87A004B0EDB /* AddressData.swift in Sources */,
+				6CB986932BADBDCF004B0EDB /* MapView.swift in Sources */,
 				6C03F7212BAD60AE00013E56 /* ContentView.swift in Sources */,
 				6CB9868D2BADA61C004B0EDB /* NaverManager.swift in Sources */,
 				6CEC84002BAD746100DB8294 /* GeoData.swift in Sources */,
 				6CEC83FC2BAD71D900DB8294 /* GeoManager.swift in Sources */,
 				6C03F71F2BAD60AE00013E56 /* bsideTestApp.swift in Sources */,
+				6CB986912BADBD78004B0EDB /* CountryProperties.swift in Sources */,
+				6CEDFDCB2BAF192400889783 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
